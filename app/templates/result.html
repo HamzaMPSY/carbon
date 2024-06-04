@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Analysis Results</h1>
+    </header>
+    <div class="container">
+        <main>
+            <div class="results-section">
+                <h2>Original Text</h2>
+                <p>{{ text }}</p>
+                <h2>Preprocessed Text</h2>
+                <p>{{ preprocessed_text }}</p>
+                <h2>Top sentences using TextRank Algorithm</h2>
+                <ul>
+                    {% for entity in entities %}
+                        <li>{{ entity }}</li>
+                    {% endfor %}
+                </ul>
+                <h2>TF-IDF Summary</h2>
+                <p>{{ tfidf_summary }}</p>
+                <h2>Word Frequency Summary</h2>
+                <p>{{ wf_summary }}</p>
+                <h2>Formulas</h2>
+                <ul>
+                    {% for formula in formulas %}
+                        <li>{{ formula }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 EcoDataExtractor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

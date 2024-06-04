@@ -1,0 +1,9 @@
+Flask
+requests
+beautifulsoup4
+nltk
+spacy
+pandas
+PyPDF2
+scikit-learn
+python-docx

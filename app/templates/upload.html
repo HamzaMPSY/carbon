@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Upload Document for Analysis</h1>
+        </header>
+        <main>
+            <div class="upload-section">
+                <h2>Upload Document</h2>
+                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 EcoDataExtractor. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

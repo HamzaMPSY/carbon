@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDataExtractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script async src="https://cse.google.com/cse.js?cx=60016991b53e74649"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EcoDataExtractor</h1>
+        </header>
+        <main>
+            <div class="search-section">
+                <h2>Search for Carbon Emissions Data</h2>
+                <div class="gcse-search"></div>
+            </div>
+            <div class="upload-section">
+                <h2>Upload Document for Analysis</h2>
+                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 EcoDataExtractor. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
